@@ -1,5 +1,13 @@
 # 基于多反应堆的高并发服务器
 
+```
+cd src/
+code main.cpp
+// 修改端口号和资源路径
+unsigned short port = 5050;
+chdir("/root/Multi-Reactor-HttpServer/Resource");
+```
+
 项目编译
 ```
 cd build
@@ -7,12 +15,18 @@ cmake ..
 make
 ```
 
+
 项目运行
 ```
 ./app
 ```
 
 压力测试
+```
+cd webbench-1.5
+make
+```
+
 ```
 ./webbench -c 100 -t 10 http://127.0.0.1:5050/
 
